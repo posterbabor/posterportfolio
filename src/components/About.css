@@ -1,0 +1,167 @@
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+  padding: 100px 10%;
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-header {
+  margin-bottom: 50px;
+}
+
+.about .section-subtitle {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about .section-title {
+  font-size: 42px;
+  color: var(--text);
+  margin: 0;
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+
+  background-color: var(--accent);
+  color: #0b0b0d;
+
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.18s ease;
+}
+.about-button:hover {
+  transform: translateY(-3px) scale(1.01);
+}
+.about-text p {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   RIGHT CARDS
+========================= */
+
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 25px;
+
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(var(--accent-rgb),0.6);
+}
+
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 55px;
+  height: 55px;
+
+  background-color: #0f172a;
+  border-radius: 10px;
+
+  color: var(--accent);
+  font-size: 26px;
+}
+
+.about-card h4 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #f8fafc;
+}
+
+.about-card p {
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 80px 6%;
+  }
+
+  .about .section-title {
+    font-size: 34px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-text h3 {
+    font-size: 26px;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-card {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .about-icon {
+    min-width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .about-card h4 {
+    font-size: 16px;
+  }
+
+  .about-card p {
+    font-size: 14px;
+  }
+}

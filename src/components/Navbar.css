@@ -1,0 +1,144 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  background-color: #0f172a;
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 20px 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--mono);
+  background: rgba(255,255,255,0.03);
+  padding: 6px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.4px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(var(--accent-rgb),0.08);
+}
+
+/* NAV LINKS */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: color 0.22s, transform 0.18s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.nav-links a.active {
+  color: var(--text);
+  background: rgba(var(--accent-rgb),0.06);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-button {
+  display: none;
+
+  background: none;
+  border: none;
+
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 18px 6%;
+  }
+
+  .menu-button {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px 0;
+
+    background-color: #0f172a;
+
+    border-bottom: 1px solid #334155;
+
+    /* ซ่อนเมนู */
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 0.3s;
+  }
+
+  /* เมื่อกดปุ่ม ☰ */
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 17px;
+  }
+}
